@@ -1,0 +1,27 @@
+- type: vessel
+  id: Honkmothership
+  name: NT Honkmothership
+  description: Ultimate clown vessel that comes with a theatre and minichurch
+  price: 10
+  category: Large
+  group: Civilian
+  shuttlePath: /Maps/_NF/Shuttles/honkmothership.yml
+
+- type: gameMap
+  id: Honkmothership
+  mapName: 'NT Honkmothership'
+  mapPath: /Maps/_NF/Shuttles/honkmothership.yml
+  minPlayers: 0
+  stations:
+    Honkmothership:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Honkmothership {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            Pilot: [ 0, 0 ]
